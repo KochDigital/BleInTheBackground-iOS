@@ -376,8 +376,8 @@ export const restoredProcess = async (device: Device) => {
     });
     log('Closing all connections...');
     await cancelAllConnections();
-  } catch (error) {
-    log(`Registered an error: ${error.message}`);
+  } catch (error:any) {
+    log(`Registered an error: ${error?.message}`);
   }
   Background.endBackgroundTask(taskName);
   log(`Task ${taskName} finished`);
